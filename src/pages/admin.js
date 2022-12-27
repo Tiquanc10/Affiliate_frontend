@@ -48,7 +48,7 @@ export default class Admin extends Component {
 
         axios
             .post("https://tcvisionspicks.herokuapp.com/post", item)
-            .then(res => console.log(res))
+            .then(res => this.getPosts())
             .catch(err => console.error(err))
             .finally(this.handleToggle)
     }
