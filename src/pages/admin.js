@@ -47,13 +47,13 @@ export default class Admin extends Component {
         }
 
         axios
-            .post("http://127.0.0.1:5000/post", item)
+            .post("https://tcvisionspicks.herokuapp.com/post", item)
             .then(res => console.log(res))
             .catch(err => console.error(err))
             .finally(this.handleToggle)
     }
     getPosts() {
-        axios.get('http://127.0.0.1:5000/posts')
+        axios.get('https://tcvisionspicks.herokuapp.com/posts')
             .then((response) => {
                 this.setState({
                     posts: response.data
@@ -64,7 +64,7 @@ export default class Admin extends Component {
             })
     }
     deletePost(id) {
-        axios.delete(`http://127.0.0.1:5000/post/${id}`)
+        axios.delete(`https://tcvisionspicks.herokuapp.com/post/${id}`)
             .then((response) => {
                 this.getPosts()
             })

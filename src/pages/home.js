@@ -14,7 +14,7 @@ export default class Home extends Component {
         this.getPosts = this.getPosts.bind(this)
     }
     getPosts() {
-        axios.get('http://127.0.0.1:5000/posts')
+        axios.get('https://tcvisionspicks.herokuapp.com/posts')
             .then((response) => {
                 this.setState({
                     posts: response.data

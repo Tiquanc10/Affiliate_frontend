@@ -32,7 +32,7 @@ export default class AuthForm extends Component {
         }
 
         axios
-            .post("http://127.0.0.1:5000/login", user)
+            .post("https://tcvisionspicks.herokuapp.com/login", user)
             .then(response =>
                 response.data.LOGGED_IN === true ?
                 this.setState({
